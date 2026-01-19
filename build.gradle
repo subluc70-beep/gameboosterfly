@@ -1,1 +1,9 @@
-
+dependencies {
+    // API oficial do Shizuku para comunicação Nativa (Binder)
+    def shizuku_version = "13.1.0"
+    implementation "dev.rikka.shizuku:api:$shizuku_version"
+    implementation "dev.rikka.shizuku:provider:$shizuku_version"
+    
+    // Suporte para o seu Banco de Dados Java
+    implementation "androidx.preference:preference:1.2.1"
+}
