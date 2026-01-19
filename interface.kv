@@ -1,1 +1,35 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 25
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.05, 0.05, 1 # Fundo Preto
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
+        Button:
+            text: "PRESET: MINECRAFT (400p)"
+            size_hint_y: 0.3
+            background_color: 0, 0, 0, 0
+            on_release: app.calcular_graficos("minecraft")
+            canvas.before:
+                Color:
+                    rgba: 0.22, 1, 0.08, 1 # Verde Neon
+                Line:
+                    width: 2
+                    rounded_rectangle: (self.x, self.y, self.width, self.height, 15)
+
+        Button:
+            text: "MODO MASSINHA (600p)"
+            size_hint_y: 0.3
+            background_color: 0, 0, 0, 0
+            on_release: app.calcular_graficos("massinha")
+            canvas.before:
+                Color:
+                    rgba: 0.22, 1, 0.08, 1
+                Line:
+                    width: 2
+                    rounded_rectangle: (self.x, self.y, self.width, self.height, 15)
